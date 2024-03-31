@@ -153,7 +153,7 @@ const Calendar = ({ inputId, selectedDate, onDateSelect }) => {
             <MonthList list={monthsList} />
           </Select>
           <Select
-            value={selectedDate.getFullYear().toString()}
+            value={selectedDate.getFullYear()}
             onValueChange={onYearChange}
           >
             <Pagination items={yearsTable} />

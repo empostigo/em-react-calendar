@@ -125,7 +125,7 @@ const Select = ({ value, children, id, onValueChange }) => {
 }
 
 Select.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   children: PropTypes.element,
   id: PropTypes.string,
   onValueChange: PropTypes.func.isRequired
