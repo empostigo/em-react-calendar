@@ -1523,7 +1523,7 @@ const ut = (n) => [
         /* @__PURE__ */ W.jsx(
           qe,
           {
-            value: _.getFullYear(),
+            value: _.getFullYear().toString(),
             onValueChange: q,
             children: /* @__PURE__ */ W.jsx(hr, { items: M })
           }
