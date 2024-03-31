@@ -84,8 +84,14 @@ const DaysTable = ({ days, date, tableHasChange, onChange }) => {
   )
 }
 
+const daysObjectPropTypes = {
+  month: PropTypes.string.isRequired,
+  monthTable: PropTypes.arrayOf(PropTypes.number).isRequired,
+  disableDays: PropTypes.arrayOf(PropTypes.number).isRequired
+}
+
 DaysTable.propTypes = {
-  days: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+  days: PropTypes.shape(daysObjectPropTypes).isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
   tableHasChange: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired
