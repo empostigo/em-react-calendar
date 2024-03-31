@@ -170,12 +170,12 @@ const Calendar = ({ inputId, selectedDate, onDateSelect }) => {
   )
 }
 
-MonthList.PropTypes = {
+MonthList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func
 }
 
-Calendar.PropTypes = {
+Calendar.propTypes = {
   inputId: PropTypes.string.isRequired,
   selectedDate: PropTypes.instanceOf(Date).isRequired,
   onDateSelect: PropTypes.func.isRequired

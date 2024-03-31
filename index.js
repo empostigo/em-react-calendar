@@ -1,4 +1,4 @@
 import Calendar from "./src/components/Calendar/Calendar"
-import { standardDate } from "./src/utils/fillCalendar"
+import Select from "./src/components/Select/Select"
 
-export { Calendar, standardDate }
+export { Calendar, Select }

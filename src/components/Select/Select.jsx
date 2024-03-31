@@ -124,9 +124,9 @@ const Select = ({ value, children, id, onValueChange }) => {
   )
 }
 
-Select.PropTypes = {
+Select.propTypes = {
   value: PropTypes.string.isRequired,
-  children: PropTypes.elementType,
+  children: PropTypes.element,
   id: PropTypes.string,
   onValueChange: PropTypes.func.isRequired
 }
