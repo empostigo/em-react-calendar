@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711892754810" clover="3.2.0">
-  <project timestamp="1711892754811" name="All files">
+<coverage generated="1711900134658" clover="3.2.0">
+  <project timestamp="1711900134658" name="All files">
     <metrics statements="33" coveredstatements="33" conditionals="11" coveredconditionals="11" methods="4" coveredmethods="4" elements="48" coveredelements="48" complexity="0" loc="33" ncloc="33" packages="1" files="1" classes="1"/>
     <file name="fillCalendar.js" path="/home/mallow/Documents/Admin/FormationOpenclassrooms/Projets/Projet_14/plugin/em-react-calendar/src/utils/fillCalendar.js">
       <metrics statements="33" coveredstatements="33" conditionals="11" coveredconditionals="11" methods="4" coveredmethods="4"/>
