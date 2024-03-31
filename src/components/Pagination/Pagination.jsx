@@ -1,5 +1,6 @@
 // React
 import { useEffect, useState } from "react"
+import PropTypes from "prop-types"
 
 /**
  * Renders a paginated list, allowing navigation through items by mouse wheel or keyboard arrows.
@@ -83,6 +84,12 @@ const Pagination = ({ items, itemsPerPage = 12, onChange }) => {
       ))}
     </ul>
   )
+}
+
+Pagination.PropTypes = {
+  items: PropTypes.array.isRequired,
+  itemsPerPage: PropTypes.number,
+  onChange: PropTypes.func.isRequired
 }
 
 export default Pagination

@@ -1,5 +1,6 @@
 // React
 import { useState } from "react"
+import PropTypes from "prop-types"
 
 // Style
 import daysStyle from "./DaysTable.module.scss"
@@ -10,17 +11,16 @@ import daysStyle from "./DaysTable.module.scss"
  *
  * @param {object} props - The properties passed to the component.
  * @param {object} props.days - Contains arrays representing days in the month and days to be disabled.
- * @param {number[]} props.days.monthTable - An array of days in the month, typically 1 through 28, 30, or 31, depending on the month.
- * @param {number[]} props.days.disableDays - An array of days that should be marked as disabled and not selectable.
+ * @param {number[]} props.monthTable - An array of days in the month, typically 1 through 28, 30, or 31, depending on the month.
+ * @param {number[]} props.disableDays - An array of days that should be marked as disabled and not selectable.
  * @param {Date} props.date - The currently selected date, used to determine which day to highlight as selected.
  * @param {boolean} props.tableHasChange - Indicates if the table has been updated, such as when changing months.
  * @param {Function} props.onChange - A callback function to handle the event when a new day is selected from the table.
  */
 const DaysTable = ({ days, date, tableHasChange, onChange }) => {
-  const daysTable = days.monthTable
-  const disableDays = days.disableDays
+  const { monthTable, disableDays } = days
 
-  const selectedDayIndex = daysTable.indexOf(1) + date.getDate() - 1
+  const selectedDayIndex = monthTable.indexOf(1) + date.getDate() - 1
   const [selectedIndex, setSelectedIndex] = useState(selectedDayIndex)
 
   const daysName = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri", "Sat."].map(
@@ -35,7 +35,7 @@ const DaysTable = ({ days, date, tableHasChange, onChange }) => {
    */
   const tableDays = () => {
     let column = []
-    for (let i = 0; i < daysTable.length; i += 7) {
+    for (let i = 0; i < monthTable.length; i += 7) {
       let tmpColumn = []
       for (let j = i; j <= i + 6; j++) {
         tmpColumn.push(
@@ -58,10 +58,10 @@ const DaysTable = ({ days, date, tableHasChange, onChange }) => {
             `}
             onClick={() => {
               setSelectedIndex(j)
-              onChange(daysTable[j])
+              onChange(monthTable[j])
             }}
           >
-            {daysTable[j]}
+            {monthTable[j]}
           </td>
         )
       }
@@ -82,6 +82,13 @@ const DaysTable = ({ days, date, tableHasChange, onChange }) => {
       </tbody>
     </table>
   )
+}
+
+DaysTable.PropTypes = {
+  days: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
+  tableHasChange: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired
 }
 
 export default DaysTable

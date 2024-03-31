@@ -1,5 +1,6 @@
 // React
 import React, { isValidElement, useEffect, useRef, useState } from "react"
+import PropTypes from "prop-types"
 
 // Icons
 import angleDown from "../../assets/arrows/angle-down.svg"
@@ -16,14 +17,14 @@ import selectStyle from "./Select.module.scss"
  * The component manages its open/closed state and communicates the selected value via a callback.
  *
  * @param {object} props - The component props.
- * @param {string} props.initValue - The initial value to display in the select button. This value is also used as the default selection.
+ * @param {string} props.value - The initial value to display in the select button. This value is also used as the default selection.
  * @param {React.ReactNode} props.children - The child components or elements, usually `Option` components, to render inside the dropdown. These should be constructed to interact with the `Select` component via props.
  * @param {string} [props.id] - An optional ID for the select button, useful for associating the component with a label for accessibility purposes.
  * @param {function} props.onValueChange - A callback function that is invoked when a new value is selected from the dropdown. The new value is passed as an argument to this function.
  */
-const Select = ({ initValue, children, id, onValueChange }) => {
+const Select = ({ value, children, id, onValueChange }) => {
   const [dropdownState, setDropdownState] = useState({ open: false })
-  const [buttonValue, setButtonValue] = useState(initValue)
+  const [buttonValue, setButtonValue] = useState(value)
   const [wrapperHeight, setWrapperHeight] = useState(0)
 
   const wrapper = useRef()
@@ -63,10 +64,10 @@ const Select = ({ initValue, children, id, onValueChange }) => {
 
     if (wrapper.current) setWrapperHeight(wrapper.current.offsetHeight)
 
-    setButtonValue(initValue)
+    setButtonValue(value)
 
     return () => document.removeEventListener("mousedown", hasClickOutside)
-  }, [initValue])
+  }, [value])
 
   /**
    * Enhances the children components with additional props.
@@ -119,6 +120,13 @@ const Select = ({ initValue, children, id, onValueChange }) => {
       )}
     </div>
   )
+}
+
+Select.PropTypes = {
+  value: PropTypes.string.isRequired,
+  children: PropTypes.elementType,
+  id: PropTypes.string,
+  onValueChange: PropTypes.func.isRequired
 }
 
 export default Select

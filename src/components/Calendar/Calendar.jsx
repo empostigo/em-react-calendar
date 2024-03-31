@@ -1,5 +1,6 @@
 // React
 import { useState } from "react"
+import PropTypes from "prop-types"
 
 // Components
 import Select from "../Select/Select"
@@ -146,13 +147,13 @@ const Calendar = ({ inputId, selectedDate, onDateSelect }) => {
         </button>
         <div className={calendarStyle.navbar}>
           <Select
-            initValue={monthsList[selectedDate.getMonth()]}
+            value={monthsList[selectedDate.getMonth()]}
             onValueChange={onMonthChange}
           >
             <MonthList list={monthsList} />
           </Select>
           <Select
-            initValue={selectedDate.getFullYear()}
+            value={selectedDate.getFullYear()}
             onValueChange={onYearChange}
           >
             <Pagination items={yearsTable} />
@@ -167,6 +168,17 @@ const Calendar = ({ inputId, selectedDate, onDateSelect }) => {
       />
     </article>
   )
+}
+
+MonthList.PropTypes = {
+  list: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onChange: PropTypes.func
+}
+
+Calendar.PropTypes = {
+  inputId: PropTypes.string.isRequired,
+  selectedDate: PropTypes.instanceOf(Date).isRequired,
+  onDateSelect: PropTypes.func.isRequired
 }
 
 export default Calendar
