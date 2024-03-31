@@ -1,6 +1,6 @@
 {
   "name": "em-react-calendar-test9",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "exports": "./dist/em-react-calendar.es.js",
   "licence": "MIT",
