@@ -1384,7 +1384,7 @@ const hr = ({ items: n, itemsPerPage: _ = 12, onChange: y }) => {
 hr.propTypes = {
   items: H.array.isRequired,
   itemsPerPage: H.number,
-  onChange: H.func.isRequired
+  onChange: H.func
 };
 const st = "_wrapper_135ri_1", ct = "_day_135ri_1", xe = {
   wrapper: st,
