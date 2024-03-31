@@ -89,7 +89,7 @@ const Pagination = ({ items, itemsPerPage = 12, onChange }) => {
 Pagination.propTypes = {
   items: PropTypes.array.isRequired,
   itemsPerPage: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func
 }
 
 export default Pagination

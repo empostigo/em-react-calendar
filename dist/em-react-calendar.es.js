@@ -1347,9 +1347,9 @@ const H = /* @__PURE__ */ qr(Zr), Qr = "data:image/svg+xml,%3csvg%20xmlns='http:
     )
   ] });
 };
-qe.PropTypes = {
+qe.propTypes = {
   value: H.string.isRequired,
-  children: H.elementType,
+  children: H.element,
   id: H.string,
   onValueChange: H.func.isRequired
 };
@@ -1381,7 +1381,7 @@ const hr = ({ items: n, itemsPerPage: _ = 12, onChange: y }) => {
     `${f}-${crypto.randomUUID()}`
   )) });
 };
-hr.PropTypes = {
+hr.propTypes = {
   items: H.array.isRequired,
   itemsPerPage: H.number,
   onChange: H.func.isRequired
@@ -1425,7 +1425,7 @@ const st = "_wrapper_135ri_1", ct = "_day_135ri_1", xe = {
     u().map((d) => /* @__PURE__ */ W.jsx("tr", { children: d }, `${crypto.randomUUID()}`))
   ] }) });
 };
-mr.PropTypes = {
+mr.propTypes = {
   days: H.objectOf(H.arrayOf(H.number)).isRequired,
   date: H.instanceOf(Date).isRequired,
   tableHasChange: H.bool.isRequired,
@@ -1541,11 +1541,11 @@ const ut = (n) => [
     )
   ] });
 };
-gr.PropTypes = {
+gr.propTypes = {
   list: H.arrayOf(H.string).isRequired,
   onChange: H.func
 };
-bt.PropTypes = {
+bt.propTypes = {
   inputId: H.string.isRequired,
   selectedDate: H.instanceOf(Date).isRequired,
   onDateSelect: H.func.isRequired
