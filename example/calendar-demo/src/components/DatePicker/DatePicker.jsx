@@ -7,6 +7,7 @@
 
 // React
 import { useState, useRef } from "react"
+import PropTypes from "prop-types"
 
 // Components
 import { Calendar } from "em-react-calendar"
@@ -73,6 +74,11 @@ const DatePicker = ({ name, label }) => {
       </div>
     </article>
   )
+}
+
+DatePicker.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired
 }
 
 export default DatePicker
