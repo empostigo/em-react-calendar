@@ -12,7 +12,9 @@
   ],
   "files": [
     "./dist/*",
-    "./index.js"
+    "./index.js",
+    "./calendar.png",
+    "./example/calendar-demo"
   ],
   "jest": {
     "verbose": true,
