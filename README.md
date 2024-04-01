@@ -26,7 +26,7 @@ There is two components usable in this plugin:
 
 To use it: `import { Calendar } form "em-react-calendar` \
 The style has to be imported in main.jsx: `import "../node_modules/em-react-calendar/dist/style.css"` \
-See in the [example/calendar-demo](https://github.com/empostigo/em-react-calendar/tree/main/example/calendar-demo "") folder for further instructions.
+See in the [example/calendar-demo](https://github.com/empostigo/em-react-calendar/tree/main/example/calendar-demo "") folder for further instructions. A published [demo site](https://calendar-demo.empostigo.dev) is available.
 
 - The Select component, it has four props:
   - `value`: The value to display in the equivalent html select tag, i.e. a button
