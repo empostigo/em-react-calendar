@@ -10,7 +10,7 @@
 
 `npm install "em-react-calendar"`
 
-npm link: 
+[npm link](https://www.npmjs.com/package/em-react-calendar)
 
 ## Usage
 

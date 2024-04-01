@@ -4,6 +4,12 @@
   "type": "module",
   "exports": "./dist/em-react-calendar.es.js",
   "licence": "MIT",
+  "description": "A React component calendar",
+  "keywords": [
+    "calendar",
+    "react",
+    "vite"
+  ],
   "files": [
     "./dist/*",
     "./index.js"
