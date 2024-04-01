@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "index.js"),
-      name: "em-react-calendar-test9",
+      name: "em-react-calendar",
       fileName: format => `em-react-calendar.${format}.js`
     },
     rollupOptions: {
