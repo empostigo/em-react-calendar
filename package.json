@@ -1,6 +1,6 @@
 {
   "name": "em-react-calendar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "exports": "./dist/em-react-calendar.es.js",
   "licence": "MIT",
