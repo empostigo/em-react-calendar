@@ -1,6 +1,6 @@
 # em-react-calendar : A React component Calendar
 
-![Calendar Screenshot](./calendar.png "React Calendar")
+![Calendar Screenshot](https://github.com/empostigo/em-react-calendar/blob/main/calendar.png "React Calendar")
 
 ## Runtime / package manager
 
@@ -24,7 +24,7 @@ There is two components usable in this plugin:
 
 To use it: `import { Calendar } form "em-react-calendar` \
 The style has to be imported in main.jsx: `import "../node_modules/em-react-calendar/dist/style.css"` \
-See in the [example/calendar-demo](./example/calendar-demo "") folder for further instructions.
+See in the [example/calendar-demo](https://github.com/empostigo/em-react-calendar/tree/main/example/calendar-demo "") folder for further instructions.
 
 - The Select component, it has four props:
   - `value`: The value to display in the equivalent html select tag, i.e. a button
@@ -37,4 +37,4 @@ Keep in mind that this plugin first of all a Calendar react component, so the Se
 
 ## Licence
 
-This project is under [MIT](LICENCE.md) licence.
+This project is under [MIT](https://github.com/empostigo/em-react-calendar/blob/main/LICENCE.md) licence.
