@@ -14,12 +14,27 @@
 
 ## Usage
 
-The component has three props:
+There is two components usable in this plugin:
 
-- `inputId`: the id of the input used to display selected date
-- `selectedDate`: A Date object used to init the calendar and track the selected date, `new Date()` is relevant for initiation
-- `onDateSelect` A callback function to handle date selection
+- The Calendar component, it has three props:
 
-The style has to be imported in main.jsx: `import "../node_modules/em-react-calendar/dist/style.css"`
+  - `inputId`: the id of the input used to display selected date
+  - `selectedDate`: A Date object used to init the calendar and track the selected date, `new Date()` is relevant for initiation
+  - `onDateSelect` A callback function to handle date selection
 
+To use it: `import { Calendar } form "em-react-calendar` \
+The style has to be imported in main.jsx: `import "../node_modules/em-react-calendar/dist/style.css"` \
 See in the [example/calendar-demo](./example/calendar-demo "") folder for further instructions.
+
+- The Select component, it has four props:
+  - `value`: The value to display in the equivalent html select tag, i.e. a button
+  - `id`: An optional id for the button; if no id is provided, the dropdown arrows will be in golden color (due to Calendar need)
+  - `onValueChange`: A callback function to handle selected option
+
+To use it: `import { Select from "em-react-calendar }`
+
+Keep in mind that this plugin first of all a Calendar react component, so the Select component may help for some needs, but it's a specific component.
+
+## Licence
+
+This project is under [MIT](LICENCE.md) licence.
