@@ -1,5 +1,7 @@
 # em-react-calendar : A React component Calendar
 
+Version: 1.0.5
+
 ![Calendar Screenshot](https://github.com/empostigo/em-react-calendar/blob/main/calendar.png "React Calendar")
 
 ## Runtime / package manager
