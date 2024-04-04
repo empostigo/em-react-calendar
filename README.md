@@ -24,7 +24,7 @@ There is two components usable in this plugin:
   - `selectedDate`: A Date object used to init the calendar and track the selected date, `new Date()` is relevant for initiation
   - `onDateSelect` A callback function to handle date selection
 
-To use it: `import { Calendar } form "em-react-calendar` \
+To use it: `import { Calendar } form "em-react-calendar"` \
 The style has to be imported in main.jsx: `import "../node_modules/em-react-calendar/dist/style.css"` \
 See in the [example/calendar-demo](https://github.com/empostigo/em-react-calendar/tree/main/example/calendar-demo "") folder for further instructions. A published [demo site](https://calendar-demo.empostigo.dev) is available.
 
@@ -33,7 +33,7 @@ See in the [example/calendar-demo](https://github.com/empostigo/em-react-calenda
   - `id`: An optional id for the button; if no id is provided, the dropdown arrows will be in golden color (due to Calendar need)
   - `onValueChange`: A callback function to handle selected option
 
-To use it: `import { Select from "em-react-calendar }`
+To use it: `import { Select } from "em-react-calendar"`
 
 Keep in mind that this plugin first of all a Calendar react component, so the Select component may help for some needs, but it's a specific component.
 
